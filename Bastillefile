@@ -1,7 +1,4 @@
-PKG zsh vim-console git-lite redis
-
-CP root /
-CP etc /
+PKG zsh redis
 
 CMD mkdir -p /usr/local/etc/git_config/redis
 
@@ -10,7 +7,7 @@ MOUNT /werzel/server_config/redis usr/local/etc/git_config/redis nullfs ro 0 0
 
 # Link Configurations to /usr/local/etc/ from /usr/local/etc/git_config/*/
 CMD rm -rf /usr/local/etc/redis.conf
-CMD ln -s /usr/local/etc/redis.conf /usr/local/etc/git_config/redis/redis.conf
+CMD ln -s /usr/local/etc/git_config/redis/redis.conf /usr/local/etc/redis.conf 
 
 SYSRC redis_enable=YES
 
