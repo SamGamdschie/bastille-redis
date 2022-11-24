@@ -2,7 +2,6 @@ PKG zsh redis
 
 CMD mkdir -p /usr/local/etc/git_config/redis
 
-MOUNT /usr/ports usr/ports nullfs ro 0 0 
 MOUNT /werzel/server_config/redis usr/local/etc/git_config/redis nullfs ro 0 0
 
 # Link Configurations to /usr/local/etc/ from /usr/local/etc/git_config/*/
