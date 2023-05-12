@@ -1,4 +1,4 @@
-PKG zsh redis
+PKG zsh htop redis
 
 CMD mkdir -p /usr/local/etc/git_config/redis
 
